@@ -75,25 +75,25 @@ int main(void) {
     for(n=0; n<sizeof(mystring)-1; n++) 
         mystring[n]=(char)n+1;
 
-    // example: allow only letters 
+    // allow only letters 
     //strstrip(mystring, sizeof(mystring), "a");
 
-    // example: allow only numbers 
+    // allow only numbers 
     //strstrip(mystring, sizeof(mystring), "n");
 
-    // example: allow letters and numbers 
+    // allow letters and numbers 
     //strstrip(mystring, sizeof(mystring), "an");
 
-    // example: allow letters, numbers and some other chars 
+    // allow letters, numbers and some other chars 
     //strstrip(mystring, sizeof(mystring), "an_./[]");
 
-    // example: allow letters, numbers and some other chars plus convert spaces to underscore
+    // allow letters, numbers and some other chars plus convert spaces to underscore
     strstrip(mystring, sizeof(mystring), "anu_./[]");
 
-    // example: allow only letters a, b, c and numbers 1, 2, 3
+    // allow only letters a, b, c and numbers 1, 2, 3
     //strstrip(mystring, sizeof(mystring), "!abc123");
 
-    // example: allow hex numbers
+    // allow hex numbers
     //strstrip(mystring, sizeof(mystring), "n!abcdef");
 
     puts(mystring);
