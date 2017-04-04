@@ -1,0 +1,28 @@
+strstrip() - strip unwanted characters from a string
+
+A C string manipulation function that allows to strip unwanted characters from a string.
+As an added bonus it allows converting spaces to underscores.
+This function should be part of libc but it isn't.
+
+Example uses:
+
+    // allow only letters 
+    strstrip(mystring, sizeof(mystring), "a");
+
+    // allow only numbers 
+    strstrip(mystring, sizeof(mystring), "n");
+
+    // allow letters and numbers 
+    strstrip(mystring, sizeof(mystring), "an");
+
+    // allow letters, numbers and some other chars 
+    strstrip(mystring, sizeof(mystring), "an_./[]");
+
+    // allow letters, numbers and some other chars plus convert spaces to underscore
+    strstrip(mystring, sizeof(mystring), "anu_./[]");
+
+    // allow only letters a, b, c and numbers 1, 2, 3
+    strstrip(mystring, sizeof(mystring), "!abc123");
+
+    // allow hex numbers
+    strstrip(mystring, sizeof(mystring), "n!abcdef");
